@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/assets/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'), 
+       url('/assets/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/assets/fonts/Ubuntu/Ubuntu-Medium.woff2') format('woff2'), 
+       url('/assets/fonts/Ubuntu/Ubuntu-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/assets/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'), 
+       url('/assets/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/assets/fonts/Overpass/Overpass-Light.woff2') format('woff2'), 
+       url('/assets/fonts/Overpass/Overpass-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('/assets/fonts/Overpass/Overpass-SemiBold.woff2') format('woff2'), 
+       url('/assets/fonts/Overpass/Overpass-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h3 {
+  @apply text-headings font-bold mb-[1rem] tracking-wider text-2xl font-primaryFont ;
+}
+
+h4 {
+  @apply mb-[1rem] font-semibold;
+}
+
+p {
+  @apply text-bodyCopy;
+}
+
+.toggle-hamburger, .toggle-close {
+  @apply absolute mx-auto top-[-0.5rem];
+}
+
+.toggle-close {
+  @apply hidden
+}
+
+.menu-open {
+  @apply block
+}
+
+.menu-icon .toggle-hamburger{ 
+  @apply hidden rotate-90
+}
+
+.menu-icon .toggle-close {
+  @apply block rotate-90
+}
+
+.dropdown-menu {
+  @apply h-0  overflow-hidden cursor-pointer
+}
+
+.dropdown-item:hover .dropdown-icon {
+  @apply rotate-180 
+}
+
+.dropdown-item:hover .dropdown-menu {
+  @apply h-auto py-6 
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
